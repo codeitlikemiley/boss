@@ -62,3 +62,17 @@ INFO: Running command line: bazel-bin/server
 ## This is Repo to test [Cargo Runner](https://github.com/codeitlikemiley/cargo-runner)
 
 Latest version of Cargo Runner Introduce different Binary / Test Framework which can totally replace Cargo
+
+## Known Limitation
+
+Currently Bazel has no support for `rustdoc` for running individual doctests we can run all doctest 
+
+```bazel
+# Doc tests
+rust_doc_test(
+    name = "doc",
+    crate = ":boss", 
+)
+```
+
+`:boss` is the name of the library
