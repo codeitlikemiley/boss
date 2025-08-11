@@ -20,3 +20,6 @@ crate.from_cargo(
     manifests = ["//:Cargo.toml"],
 )
 use_repo(crate, "crates")
+
+rust_analyzer = use_extension("@rules_rust//tools/rust_analyzer:extension.bzl", "rust_analyzer")
+rust_analyzer.setup()
