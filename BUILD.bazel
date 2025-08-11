@@ -1,7 +1,17 @@
-load("@rules_rust//rust:defs.bzl", "rust_binary")
+load("@rules_rust//rust:defs.bzl", "rust_binary", "rust_test")
 
 rust_binary(
     name = "server",
+    srcs = ["src/main.rs"],
+    edition = "2024",
+    deps = [
+        "@crates//:axum",
+        "@crates//:tokio",
+    ],
+)
+
+rust_test(
+    name = "test",
     srcs = ["src/main.rs"],
     edition = "2024",
     deps = [
