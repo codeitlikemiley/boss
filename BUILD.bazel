@@ -19,9 +19,3 @@ rust_test(
         "@crates//:tokio",
     ],
 )
-
-rust_library(
-    name = "boss",
-    srcs = glob(["src/**/*.rs"]),
-    edition = "2024",
-)
