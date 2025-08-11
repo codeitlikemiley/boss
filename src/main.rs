@@ -26,3 +26,17 @@ async fn hello_world() -> &'static str {
 async fn ping() -> &'static str {
     "pong"
 }
+
+#[cfg(test)]
+mod tests {
+
+    #[test]
+    fn example() {
+        assert!(true);
+    }
+
+    #[test]
+    fn another_example() {
+        assert!(true);
+    }
+}
